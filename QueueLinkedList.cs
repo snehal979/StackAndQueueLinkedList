@@ -40,8 +40,45 @@ namespace LinkedStackAndQueProblem
                 temp =temp.next;
             }
         }
+        public void Dequeue()
+        {
+            if (this.headtop==null)
+            {
+                Console.WriteLine("list is empty");
+            }
+            Console.WriteLine("data is top position "+this.headtop.data);
+            this.headtop = this.headtop.next;
+        }
+        public void Empty()
+        {
+            while (this.headtop!=null)
+            {
+                Dequeue();
+
+            }
+        }
+        public void Size()
+        {
+            Node temp = this.headtop;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data+" ");
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("size of stack list is "+count);
 
 
 
+
+
+
+
+        }
     }
 }
