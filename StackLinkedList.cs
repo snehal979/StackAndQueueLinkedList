@@ -40,6 +40,31 @@ namespace LinkedStackAndQueProblem
                 temp =temp.next;
             }
         }
+        public void peek()
+        {
+            if (this.headtop==null)
+            {
+                Console.WriteLine("list is empty");
+            }
+            Console.WriteLine("{0} is the top of the stack list",this.headtop.data);
+        }
+        public void Pop()
+        {
+            if (this.headtop==null)
+            {
+                Console.WriteLine("list is empty");
+            }
+            Console.WriteLine("value is pop "+this.headtop.data);
+            this.headtop = this.headtop.next;
+        }
+        public void Empty()
+        {
+            while (this.headtop!=null)
+            {
+                peek();
+                Pop();
+            }
+        }
 
     }
 }
